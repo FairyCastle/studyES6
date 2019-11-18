@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>    
+        let arr = [12,69,180,300];
+        //          中间值，当次的数值，索引
+        const math = arr.reduce((tmp,item,index)=>{
+            if(index !== arr.length -1){ //最后一次计算
+                return tmp + item
+            } else {
+                return (tmp + item)/arr.length
+            }
+        })
+
+        alert(math)
+    </script>
+</body>
+</html> 
