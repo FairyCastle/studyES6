@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const jelly = {
+            name: 'jelly',
+            date: '2019-12-2',
+            todo: [
+                {name: 'Go to store', complated: false},
+                {name: 'Go to sleep', complated: true}
+            ]
+        }
+
+
+        function renderTodos(todos) {
+            return (
+                `<ul>
+                    ${todos.map(todo => `
+                        <li>${todo.name} ${todo.complated ? '✔':'×'}</li>
+                    `).join('')}
+                </ul>`
+            )
+        }
+
+        const template = `
+            <div>
+                ${renderTodos(jelly.todo)}
+            </div>
+        `
+        document.body.innerHTML = template
+    </script>
+</body>
+</html>

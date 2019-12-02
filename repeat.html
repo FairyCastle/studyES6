@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-        let arr = [12,5,8,9]
-         // 不能终止循环 forEach
-        const zero = arr.forEach(item => alert(item));
-       
+        const id = '123456789';
+        const fan = 'I love game';
 
-        for (let fruit of arr) {
-            console.log(fruit)
+        function padder(string, length = 25) {
+            return `${' '.repeat(Math.max(length - string.length, 0))}${string}`
         }
 
-        zero();
+        console.log(padder(id));
+        console.log(padder(fan));    
     </script>
 </body>
+
 </html>

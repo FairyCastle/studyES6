@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function sum (...numbers) {
+            return numbers.reduce((prev, curr) => prev + curr, 0)
+        }
+
+        sum(1,2,3,4)
+
+
+        function converCurrency(rete,...amounts){
+            return amounts.map(amount => amount * rete)
+        }
+        
+        const total = converCurrency(0.89,12,34,656,23)
+        console.log(total)
+
+        const player = ['faker', 123,654,987,5989,65665,3232]
+
+        const [name, id , ...scores] = player;
+
+        console.log(name,id,scores);
+    </script>
+</body>
+</html>

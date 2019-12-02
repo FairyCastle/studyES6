@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const inventory = [
+            {name:'apple', quantity: 2},
+            {name:'google', quantity: 0},
+            {name:'huawei', quantity: 5}
+        ]
+        
+
+
+        //.find() 找到第一个满足条件的
+
+        const phone = inventory.find(fruit => fruit.name === 'google')
+        
+        console.log(phone);
+
+        //.findIndex() 找到第一个满足条件的索引
+
+        const phoneIndex = inventory.findIndex(fruit => fruit.name === 'huawei')
+        console.log(phoneIndex);
+
+        //.some() 遇到第一个满足的的时候停止
+        
+
+        //.every() 全部满足才会返回true
+
+    </script>
+</body>
+</html>
