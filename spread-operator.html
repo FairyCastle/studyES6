@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id ="app"> 
+
+        <ul>
+            <li>Go to store</li>
+            <li>Watch Tv</li>
+            <li>Go shopping</li>
+        </ul>
+    </div>
+
+    <script>
+        
+        const todos = [...document.querySelectorAll('li')];
+
+        const names = todos.map(todo => todo.textContent);
+
+        const favorites = {
+            color: ['blue','green'],
+            fruits: ['apple','banana']
+        }
+
+        const todoTest = [
+            {id: 1, name: 'GO to store', completed: false},
+            {id: 2, name: 'watch tv', completed: false},
+            {id: 3, name: 'Go shopping', completed: false},
+        ]
+
+        const id = 2;
+
+        const todoIndex = todos.findIndex(todo => todo.id === id);
+
+        const newTodos = [...todoTest.slice(0,todoIndex), ...todoTest.slice(todoIndex + 1)];
+        
+        //splice() 会改变原始数组，不能用变量去接收，slice() 可以用变量接收
+
+
+        
+    </script>
+</body>
+
+</html>

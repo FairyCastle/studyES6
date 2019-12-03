@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id ="app"> </div>
+
+    <script>
+        const name = 'test';
+        
+        const age = 12;
+
+        const birthday = '2015-9';
+
+        const obj = {
+            name,
+            age,
+            birthday,
+            greet(){
+                alert(`Helll ${this.name}`)
+            }
+        }
+
+        let id = 0;
+
+        //const userId = {
+        //    'userId-1' : 1,
+        //    'userId-2' : 2
+        //}
+         const userId = {
+            [`user-${++id}`] :id, 
+            [`user-${++id}`] :id 
+         }       
+
+         const keys = ['name', 'age', 'borthday'];
+         const values = ['test', 14, '2015-09']
+
+        const arrTest = {
+            [key[0]]:values[0],
+            [key[1]]:values[1],
+        }
+
+        const arrTest2 = {
+            [keys.shift()]:values.shift(),
+            [keys.shift()]:values.shift(),
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id ="app"> </div>
+
+    <script>
+        
+        const peter = Symbol('peter');
+        const student = Symbol('student');
+        const classRoom = {
+            [Symbol('lily')]: {grade:60, gender:'girl'},
+            [Symbol('nina')]: {grade:80, gender:'girl'},
+            [Symbol('nina')]: {grade:90, gender:'girl'}
+        }
+        //对象属性命名的问题，symbol不能通过遍历获取属性名
+
+        const syms = Object.getOwnPropertySymbols(classRoom).map(sym => classRoom[sym]);
+        //需使用方括号，不能使用.
+        console.log(syms);
+    </script>
+</body>
+
+</html>
